@@ -1,0 +1,31 @@
+<div class="mainform">
+	
+    <div class="col-md-12">
+        <a href="" class="btn btn-default"><i class="fa fa-eye"></i> Categories</a>
+       <a href="" class="btn btn-default"><i class="fa fa-home"></i> Home</a>
+   </div>
+   <div class="col-md-12" style="margin-bottom: 10px; border-bottom: 1px solid gray; "><h3>CATEGORY</h3></div>
+  <form [formGroup]="categoriesForm">
+       <table align="center">
+           <tr>
+               <td width="150" align="left"> Category Name: </td>
+               <td> 
+                   <input class="form-control" type="text" formControlName="category_name" size="50%"/> 
+               </td>
+            </tr>
+            
+           <tr>
+               <td width="150" align="left">  Description: </td>
+               <td> 
+                   <textarea rows="4" class="form-control" formControlName="description"></textarea>
+               </td>
+           </tr>
+          <tr>
+              <td class="text-right" colspan="2">
+                <tr> <td colspan="3" class="text-center"><button class="btn btn-default" (click)="submit()">sent</button></td>
+                </tr>
+          </tr>			 
+        </table>
+            
+</form>
+</div>

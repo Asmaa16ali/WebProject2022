@@ -1,0 +1,39 @@
+<div class="mainform">
+	
+    <div class="col-md-12">
+        <a routerLink="/viewPhoto" class="btn btn-default"><i class="fa fa-eye"></i> Photos</a>
+       <a routerLink="/admin" class="btn btn-default"><i class="fa fa-home"></i> Home</a>
+   </div>
+   <div class="col-md-12" style="margin-bottom: 10px; border-bottom: 1px solid gray; "><h3>PHOTO</h3></div>
+   <form action="" method="POST" enctype="multipart/form-data">
+      <table align="center" id="table">
+           
+           <tr style="margin-bottom: 10px; ">
+               <td align="left"> Category: </td>
+               <td> 
+                   <select name="category" class="form-control">
+                       <option value="">--select category--</option>
+                       <option value="Electronics">Electronics</option>
+                       <option value="Mechanics">Mechanics</option>
+                       <option value="Sports">Sports</option>
+                       <option value="Land and Bulding">Land and Building</option>
+                       
+                   </select>
+               </td>
+           </tr>
+
+
+           <tr> 
+               <td align="left"> Photo: </td>
+                <td> <input type="file" name="image" size="50%"/> </td>
+          </tr>	
+
+           <tr> 
+               <td colspan="2">  
+                   <input type = "submit" class="btn btn-default" name = "send" value = "Save" id="sub"/>  
+               </td>
+           </tr>
+    </table>
+            
+  </form>
+</div>

@@ -1,0 +1,34 @@
+<div class="mainform">
+	
+    <div class="col-md-12">
+        <a routerLink="/AddUser" class="btn btn-default"><i class="fa fa-plus-circle"></i> User</a>
+        <a routerLink="/admin" class="btn btn-default"><i class="fa fa-home"></i> Home</a>
+    </div>
+    
+    <div class="col-md-12 bg-info"><h3>VIEW USERS</h3></div>
+    <table class="table-condensed table-striped col-md-12">
+        
+        <tr>
+                <td>Sno</td>
+                <td>Full Names</td>
+                <td>Address</td>
+                <td>Phone Number</td>
+                <td>Email Address</td>
+                <td>User name</td>
+                <td colspan="2">Actions</td>
+        </tr>
+            <tr *ngFor="let user of Users">
+                    <td>{{user.id}}</td>
+                    <td>{{user.full_name}}</td>
+                    <td>{{user.phone_number}}</td>
+                    <td>{{user.email}}</td>
+                    <td>{{user.address}}</td>
+                    <td>{{user.gender}}</td>
+                    <td>{{user.user_name}}</td>
+                    <td>{{user.password}}</td>
+                    <td><a href="">delete</a></td>
+                    <td><a href="">edit</a></td>
+            </tr>
+                    
+</table>
+</div>

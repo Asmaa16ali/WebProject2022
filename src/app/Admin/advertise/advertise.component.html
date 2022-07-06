@@ -1,0 +1,48 @@
+<div class="mainform">
+	
+    <form [formGroup]="advertiseForm">
+        <table align="center" id="table">
+            <div class="col-md-12">
+                <a routerLink="/viewAdvatise" class="btn btn-default"><i class="fa fa-eye"></i> Advertisement</a>
+                <a routerLink="/admin" class="btn btn-default"><i class="fa fa-home"></i> Home</a>
+                  <a routerLink="/home" class="btn btn-default"><i class="fa fa-home"></i>Main Home</a>
+            </div>
+             <div class="col-md-12 text-center" style="margin: 10px 0; border-bottom: 1px solid gray;"><h2>POST ADVERTISEMENT</h2></div>
+             <tr style="margin-bottom: 10px; "> 
+                 <td width="150" align="left"> Advertisement Title: </td>
+                 <td> 
+                     <input class="form-control" type="text" formControlName="tittle" size="50%" required=""/> 
+                 </td>
+             </tr>
+             
+             <tr style="margin-bottom: 10px; ">
+                 <td align="left"> Category: </td>
+                 <td> 
+                     <select formControlName="categories" class="form-control">
+                         <option value="">--select category--</option>
+                         <option value="Electronics">Electronics</option>
+                         <option value="Mechanics">Mechanics</option>
+                         <option value="Sports">Sports</option>
+                         <option value="Land and Bulding">Land and Building</option>
+                         
+                     </select>
+                 </td>
+             </tr>
+
+             <tr style="margin-bottom: 10px; ">
+                 <td align="left"> Advertisement details: </td>
+                 <td> <textarea formControlName="details" class="form-control" rows="4" required=""></textarea></td>
+             </tr>
+             <tr> 
+                 <td align="left"> Advertisement Photo: </td>
+                  <td> <input type="file" formControlName="image" size="50%" (change)="onFileChanged($event)"/> </td>
+            </tr>	
+
+             <tr> 
+                <td colspan="2" class="text-center"><button class="btn btn-default" (click)="submit()">sent</button>  
+                 </td>
+             </tr>
+      </table>
+              
+    </form>
+</div>

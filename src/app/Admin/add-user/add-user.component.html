@@ -1,0 +1,89 @@
+<div class="mainform">
+          <!-- <form action="" method="POST">
+        <table align="center">
+         <div class="col-md-12">
+             <a href="" class="btn btn-default"><i class="fa fa-arrow-left"></i> Back</a>
+            <a href="" class="btn btn-default"><i class="fa fa-home"></i> Home</a>
+             
+        </div>
+        <tr> <th colspan="2" class="text-center"> Add New user </th>
+                </tr>
+
+            <tr> <td width="150" align="left">  Full Names: </td>
+                <td> 
+                    <input type="hidden" value="" name="id" required="">
+                    <input class="form-control" value=""  type="text" name="Name" size="50%" required=""/> </td>
+            </tr>
+
+            <tr> <td align="left"> Email: </td>
+                <td> <input  class="form-control" value= "" name="email" size="50%" required=""/> </td>
+           </tr>
+            <tr> <td align="left"> phone No: </td>
+                <td> <input class="form-control" value="" type="tel" name="phone" size="50%" required=""/> </td>
+           </tr>
+            <tr> <td align="left"> Gender: </td>
+                <td> 
+                    <select name="gender" class="form-control">
+                        <option ></option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                    
+                </td>
+                
+            </tr>
+            <tr> <td align="left"> Adress: </td>
+                 <td> <input class="form-control" value="" type="text" name="add" size="50%" required=""/> </td>
+           </tr>
+
+           <tr> <td colspan="3" class="text-center">  
+                   <input type = "submit" class="btn btn-default" name = "update" value = "Update" >  </td>
+            </tr>
+        </table>
+
+    </form> -->
+        <form [formGroup]="userForm">
+            <table align="center">
+             <div class="col-md-12">
+                 <a routerLink="/viewUser" class="btn btn-default"><i class="fa fa-eye"></i> view</a>
+                <a routerLink="/admin" class="btn btn-default"><i class="fa fa-home"></i> Home</a>
+            </div>
+            <tr> <th colspan="2" class="text-center"> 	Add New user </th>
+                    </tr>
+            <tr> <td width="150" align="left"> User name: </td>
+            <td> <input class="form-control" type="text" formControlName="user_name" size="50%" required=""/> </td>
+                </tr>
+                <tr> <td width="150" align="left">  Full Names: </td>
+                    <td> <input class="form-control"  type="text" formControlName="full_name" size="50%" required=""/> </td>
+                </tr>
+                <tr> <td align="left"> Password: </td>
+                    <td> <input class="form-control"  type="password" formControlName="password" size="50%" required=""/> </td>
+               </tr>
+
+                <tr> <td align="left"> Email: </td>
+                    <td> <input  class="form-control"  type="email" formControlName="email" size="50%" required=""/> </td>
+               </tr>
+                <tr> <td align="left"> phone No: </td>
+                    <td> <input class="form-control"  type="tel" formControlName="phone_number" size="50%" required=""/> </td>
+               </tr>
+               <tr> <td align="left"> Address: </td>
+                <td> <input class="form-control"  type="text" formControlName="address" size="50%" required=""/> </td>
+           </tr>
+                <tr> <td align="left"> Gender: </td>
+                    <td> 
+                        <select formControlName="gender" class="form-control">
+                            <option value="">--chooses gender--</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+
+                    </td>
+
+                </tr>
+               <tr> <td colspan="3" class="text-center"><button class="btn btn-default" (click)="submit()">sent</button></td>
+                </tr>
+            </table>
+
+        </form>
+
+</div>
